@@ -13,6 +13,13 @@ extern jclass bl_scriptmanager_class;
 
 class Var {
     static Hooker* hooker;
+    static class JavaClasses {
+    public:
+        jclass Test;
+    public:
+        JavaClasses();
+        ~JavaClasses();
+    } javaClasses;
     static class Flag {
         bool inGame;
         bool inServer;
@@ -29,6 +36,7 @@ public:
     static void setHooker(Hooker* hooker);
     static Hooker* getHooker();
     static void deleteHooker();
+    static JavaClasses& getJavaClassGroup();
     static Flag& getFlag();
 };
 #endif

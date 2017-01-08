@@ -6,6 +6,7 @@
 
 Hooker* Var::hooker = new Hooker();
 Var::Flag Var::flag = Var::Flag();
+Var::JavaClasses Var::javaClasses = Var::JavaClasses();
 
 void Var::setHooker(Hooker *hooker) {
     Var::hooker = hooker;
@@ -19,8 +20,20 @@ void Var::deleteHooker() {
     delete hooker;
 }
 
+Var::JavaClasses& Var::getJavaClassGroup() {
+    return javaClasses;
+}
+
 Var::Flag& Var::getFlag() {
     return flag;
+}
+
+Var::JavaClasses::JavaClasses() {
+    Test = 0;
+}
+
+Var::JavaClasses::~JavaClasses() {
+
 }
 
 Var::Flag::Flag() {

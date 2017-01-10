@@ -7,6 +7,8 @@
 #include "Entity.h"
 class Mob : public Entity {
 public:
+    enum class OFFSET {
 
+    };
 };
 #endif //N_ADDON_MOB_H
